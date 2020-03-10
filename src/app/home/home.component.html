@@ -1,0 +1,30 @@
+<head>
+    <meta charset="utf-8">
+    <title>Nasa Data</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+
+
+  <div>
+    <h3>Example data from Weather API </h3>
+
+    Data served via AWS lamda function  from API:  <a href='https://www.metaweather.com/api/location/search/?query=london'>https://www.metaweather.com/api/location/search/?query=london</a>
+    
+    <div class="row">
+      <div class="col-sm-4" *ngFor="let city of weatherData ">
+        <div class="card">
+          <div class="card-body">
+            City:<p>{{city.title}}</p>
+            Latt/ Long:<p>{{city.latt_long}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<br><br>
+    <pre> {{weatherData | json }}</pre>
+  </div>
